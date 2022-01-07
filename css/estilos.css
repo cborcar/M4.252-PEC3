@@ -1,0 +1,388 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,800;1,400&display=swap");
+
+body{
+	font-family: 'Raleway', sans-serif; /*La fuente que utilizará la página*/
+	font-weight: 400;
+	margin: 0;
+	background-color: rgb(244, 244, 244);
+	height: 100vh; /*Ocupará de ancho el 100%*/
+	color: rgb(0,0,0);
+}
+
+a{
+	text-decoration: none; /*Quitamos el subrayado de los enlaces*/
+	color: rgb(189, 55, 0);
+}
+
+h1, h2{
+	font-size: 1.5em;
+	text-align: center;
+	margin: 25px 0 10px 0;
+}
+
+p{
+	font-size: 1.1em;
+	margin: 10px 0;
+	line-height: 1.5em; /*Espaciado entre líneas*/
+}
+
+.Negrita{
+	font-weight: bold;
+}
+
+.NegritaCursiva{
+	font-weight: bold;
+	font-style: italic;
+}
+
+.Contenedor{
+	width: 70%;
+	margin: auto;
+}
+
+/*Si el ancho es menor de 600px (moviles) no se aplica el 70% de ancho al contenedor*/
+@media screen and (max-width: 600px){
+	.Contenedor{
+		width:95%;
+	}
+}
+
+/************************* CABECERA *************************/
+header{
+	background-color: white;
+	box-shadow: 0px 15px 15px rgb(244, 244, 244); /*Sombra inferior del header*/
+	padding: 15px 0;
+}
+
+/*Si el ancho es menor de 600px (moviles) se centra el texto*/
+@media screen and (max-width: 600px){
+	header{text-align: center;}
+}
+
+#LemaHeader{
+	font-size: 0.9em;
+}
+#TitularHeader{
+	font-weight: 800;
+	font-size: 3.4em;
+}
+
+#TitularHeader a:link, a:visited{
+	color: rgb(0,0,0);
+}
+
+/*ESTILO DEL MENÚ*/
+/*Quitamos los puntos a la lista desordenada que forma el menú*/
+#MenuPrincipal ul{
+	list-style: none;
+	font-weight: 800;
+	font-size: 0.9em; /*Tamaño de texto*/
+	padding: 15px 0 0 0;
+	margin: 0;
+}
+
+#MenuPrincipal li{
+	padding: 3px 0;
+}
+
+/*Colocamos los elementos del menú en línea (Solo versión escritorio)*/
+@media screen and (min-width: 600px){
+	#MenuPrincipal li{
+		display: inline-block; /*Uno al lado de otro*/
+		padding-right: 20px; /*Separados 20 píxeles*/
+	}
+}
+
+/*Le damos estilo a los enlaces del menú*/
+#MenuPrincipal li a{
+	color: rgb(0,0,0);
+}
+
+/*Que los enlaces se pongan grises al pasar por encima*/
+#MenuPrincipal li a:hover{
+	color: rgba(0,0,0,0.5);
+}
+
+.Actual{
+	color: rgb(189, 55, 0) !important;
+}
+
+/************************* MAIN *************************/
+main{
+	margin:0;
+	padding:0;
+}
+
+#Seccion1a{
+	background-image: url("../images/bg-hero-home.jpg");
+	height: 250px;
+	background-repeat: no-repeat;
+	display: flex; /*Centramos el texto verticalmente*/
+	background-size: 100%;
+}
+
+#Seccion1a h3{
+	color: rgb(255, 255, 255);
+	font-weight: 400;
+	font-size: 2.6em;
+	line-height: 1.5em; /*Espaciado entre líneas*/
+}
+
+#Seccion2a{
+	margin-bottom: 60px;
+}
+
+#Seccion3a{
+	margin-bottom: 50px;
+}
+
+/*ESTILO DE LOS FLEXBOX*/
+/**** Noticias ****/
+#FlexboxNoticias{
+    display: flex; /*Los elementos se mostrarán como cajas flexibles*/
+    gap: 30px; /*Espaciado entre noticias*/
+}
+
+article{
+    flex: 1 1 33%; /*Cada artículo ocupará un 33% de ancho*/
+}
+
+.Noticia img{
+	width:100%;
+}
+
+.Noticia p.Fecha{
+    font-size: 0.7em; 
+    margin: 7px 0;    
+}
+
+.Noticia h3{
+	font-size: 0.9em;
+	margin: 0;
+	font-weight: 600;
+	line-height: 1.2em;
+}
+
+.Noticia p{
+	font-size: 0.8em;
+}
+
+.Noticia a, .Sintoma a{
+    color:rgb(189, 55, 0);
+}
+
+.Punteado{
+	font-weight: 800;
+	font-size: 0.9em;
+	border-bottom: 1px dotted rgb(189, 55, 0);
+}
+
+/**** Síntomas ****/
+#FlexboxSintomas{
+	margin: 30px 0 80px 0;
+}
+
+.Sintoma{
+	display: flex; /*Los elementos se mostrarán como cajas flexibles*/
+	width: 65%;
+    background-color: rgb(255, 255, 255);
+	padding: 12px;
+	margin-bottom: 30px;
+	border-radius: 10px;
+}
+
+.Derecha{
+	float: right;
+}
+
+.Sintoma img{
+	width: 50%;
+	object-fit: cover;
+}
+
+.TextoSintoma{
+	display: block;
+	margin-left: 15px;
+}
+
+.Sintoma h3{
+	font-weight: 600;
+	margin: 0;
+}
+
+.Sintoma p{
+	font-size: 0.7em;
+	text-align: justify;
+	hyphens: auto; /*Que no extienda los espacios, que ponga guiones*/
+}
+
+/**** Vídeos ****/
+#FlexboxVideos{
+	margin: 30px 0 80px 0;
+    display: flex; /*Los elementos se mostrarán como cajas flexibles*/
+    gap: 20px; /*Espaciado entre noticias*/
+	flex-wrap: wrap;
+}
+
+.Video iframe{
+	width: 100%;
+	height: 250px;
+}
+
+.Video{
+	background-color: rgb(255, 255, 255);
+	flex: 1 1 40%;
+}
+
+.Leyenda{
+	font-size: 0.7em;
+	font-weight: bold;
+	font-style: italic;
+	padding: 15px 0;
+	width: 90%;
+	margin: auto;
+	text-align: center;
+}
+
+.AutorVideo{
+	font-weight: normal;
+	font-style: normal;
+}
+
+#Seccion4a{
+	padding: 10px 0 50px 0;
+	background-color: rgb(242, 232, 228);
+}
+
+form{
+	width: 70%;
+	margin: auto;
+}
+
+form a{
+	color:rgb(189, 55, 0) !important;
+}
+
+#Nombre, #Email{
+	display: block;
+    width: 95%;
+    margin-bottom: 10px;
+    padding: 10px; 
+}
+
+form p{
+	font-size: 0.6em
+}
+
+label{
+	font-size: 0.6em;
+}
+
+button{
+    padding: 10px 20px;
+	color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 0px;
+    background-color: rgb(189, 55, 0);
+	margin-top: 10px;
+}
+
+/*Adaptamos el main a móviles*/
+@media screen and (max-width: 600px){
+	#Seccion1a h3{
+		font-size: 2.1em;
+	}
+
+	#FlexboxNoticias, #FlexboxVideos{
+		display:block; /*Que no se muestre como cajas flexibles*/
+	}
+
+	.Sintoma{
+		display: block; /*Los elementos se mostrarán como cajas flexibles*/
+		width: 90%;
+		margin: auto;
+	}
+
+	.Derecha{
+		float: none;
+	}
+
+	.Sintoma img{
+		padding-top: 15px;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+	article, .Sintoma, .Video{
+		margin-bottom: 30px;
+	}
+
+	form{
+		width: 90%;
+	}
+}
+
+
+/************************* PIE *************************/
+
+footer{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 30px 0 10px 0;
+	font-size: 0.8em;
+	font-weight: 400;
+}
+
+#MenuTerminosLegales ul, #MenuRedesSociales ul{
+	list-style: none;
+	padding: 15px 0 0 0;
+	margin: 0;
+}
+
+#MenuTerminosLegales li{
+	display: inline-block; /*Uno al lado de otro*/
+	padding-right: 20px; /*Separados 20 píxeles*/
+}
+
+#MenuRedesSociales li{
+	display: inline-block; /*Uno al lado de otro*/
+	margin: 10px 0;
+}
+
+#MenuTerminosLegales li a{
+	color: rgb(255, 255, 255);
+}
+
+#MenuTerminosLegales li a:hover{
+	color: rgb(189, 55, 0);
+}
+
+#Autor{
+	font-size: 0.9em;
+}
+
+#EnlaceInterno{
+	text-align: right;
+	margin-right: 20px;
+	font-size: 2em;
+}
+#EnlaceInterno a{
+	color: rgb(255, 255, 255);
+}
+
+#EnlaceInterno a:hover{
+	color: rgb(189, 55, 0);
+}
+
+/*Versión móvil*/
+@media screen and (max-width: 600px){
+	footer{
+		text-align: center;
+	}
+	
+	#MenuTerminosLegales li{
+		display: block; /*Uno encima del otro*/
+		padding-right: 20px; /*Separados 20 píxeles*/
+	}
+}
+
