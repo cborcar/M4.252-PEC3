@@ -78,8 +78,8 @@ header{
 }
 
 /*Cambiamos el color del enlace que hay en TitularHeader*/
-#TitularHeader a:link, a:visited{
-	color: rgb(0, 0, 0); /*De forma predeterminada es rojo y queremos que éste en concreto sea negro*/
+#Header a:link, a:visited{
+	color: rgb(0, 0, 0);
 }
 
 /************************* MAIN *************************/
@@ -215,7 +215,7 @@ button{
 
 /*Tamaño de la fecha*/
 .CajaNoticia p.Fecha{
-    font-size: 0.7em; 
+    font-size: 0.8em; 
     margin: 7px 0;  /*Le ponemos un margen superior e inferior para que no esté pegado a la imagen*/  
 }
 
@@ -281,7 +281,7 @@ button{
 
 /*Tipo de letra que tendrá el párrafo del síntoma*/
 .CajaSintoma p{
-	font-size: 0.7em;
+	font-size: 0.8em;
 	text-align: justify; /*Alineación justificada*/
 	hyphens: auto; /*Que no extienda los espacios, que ponga guiones*/
 }
