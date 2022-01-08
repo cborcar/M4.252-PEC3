@@ -47,7 +47,7 @@ p{
 }
 
 /*Si el ancho es menor de 767px (moviles) no se aplica el 70% de ancho al contenedor*/
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px), screen and (orientation: portrait) {
 	.Contenedor{
 		width:95%;
 	}
@@ -60,7 +60,7 @@ header{
 }
 
 /*Si el ancho es menor de 767px (moviles) se centra el texto*/
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px), screen and (orientation: portrait) {
 	header{
 		text-align: center;
 	}
@@ -110,7 +110,7 @@ main{
 }
 
 /*Colocamos los elementos del menú uno encima de otro (móviles)*/
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px), screen and (orientation: portrait) {
 	#MenuPrincipal li{
 		padding: 3px 0; /*Añadimos relleno arriba y abajo para separarlos*/
 		display: block; /*Uno encima de otro*/
@@ -388,7 +388,7 @@ blockquote{
 }
 
 /*Adaptamos el main a móviles*/
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px), screen and (orientation: portrait) {
 	#Seccion1a h3{
 		font-size: 2.1em;
 	}
@@ -480,7 +480,7 @@ footer{
 }
 
 /*Versión móvil del footer*/
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px), screen and (orientation: portrait) {
 	footer{
 		text-align: center;
 	}
