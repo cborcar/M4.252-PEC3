@@ -18,16 +18,15 @@ a{
 
 /*Estilo predeterminado a los títulos*/
 h1, h2{
-	font-size: 1.5em; /*Tamaño*/
+	font-size: 1.5rem; /*Tamaño*/
 	text-align: center; /*Alineación*/
 	margin: 25px 0 10px 0; /*Márgenes (top, right, bottom, left)*/
 }
 
 /*Estilo predeterminado a los párrafos*/
 p{
-	font-size: 1.1em; /*Tamaño*/
+	font-size: 1.1rem; /*Tamaño*/
 	margin: 10px 0; /*Márgenes*/
-	line-height: 1.4em; /*Espaciado entre líneas*/
 }
 
 /*Clase negrita, pone el texto en negrita*/
@@ -68,13 +67,13 @@ header{
 
 /*Tamaño del Lema*/
 #LemaHeader{
-	font-size: 0.9em;
+	font-size: 0.9rem;
 }
 
 /*Tamaño del Titular*/
 #TitularHeader{
 	font-weight: 800; /*Utilizará el tipo de letra extra-bold*/
-	font-size: 3.4em;
+	font-size: 3.4rem;
 }
 
 /*Cambiamos el color del enlace que hay en TitularHeader*/
@@ -94,7 +93,7 @@ main{
 	background-color: rgb(255, 255, 255);
 	padding: 15px 0; /*Añadimos un relleno de 15px arriba y abajo*/
 	font-weight: 800; /*Tipo de letra extra-bold*/
-	font-size: 0.9em; /*Tamaño de texto*/
+	font-size: 0.9rem; /*Tamaño de texto*/
 }
 
 /*Quitamos los puntos a la lista desordenada que forma el menú*/
@@ -147,8 +146,8 @@ main{
 #Seccion1a h3{
 	color: rgb(255, 255, 255); /*Color blanco*/
 	font-weight: 400; /*Tipo de letra normal*/
-	font-size: 2.6em; /*Tamaño*/
-	line-height: 1.5em; /*Espaciado entre líneas*/
+	font-size: 2.6rem; /*Tamaño*/
+	line-height: 4rem; /*Espaciado entre líneas*/
 }
 
 /*Añadimos un margen inferior de 60px a la sección 2 y 3*/
@@ -183,7 +182,7 @@ form a{
 
 /*El tamaño de la letra del formulario será pequeñito*/
 form p, label{
-	font-size: 0.6em
+	font-size: 0.6rem
 }
 
 /*Estilo al botón*/
@@ -215,21 +214,20 @@ button{
 
 /*Tamaño de la fecha*/
 .CajaNoticia p.Fecha{
-    font-size: 0.8em; 
+    font-size: 0.8rem; 
     margin: 7px 0;  /*Le ponemos un margen superior e inferior para que no esté pegado a la imagen*/  
 }
 
 /*Estilo al titulo de la noticia*/
 .CajaNoticia h3{
-	font-size: 0.9em; /*Tamaño*/
+	font-size: 0.9rem; /*Tamaño*/
 	margin: 0; /*Le quitamos el margen ya que la fecha y el párrafo lo incorporan*/
 	font-weight: 600; /*Tipo de letra bold*/
-	line-height: 1.2em; /*Espaciado entre líneas*/
 }
 
 /*Tamaño del texto de la noticia*/
 .CajaNoticia p{
-	font-size: 0.8em;
+	font-size: 0.8rem;
 }
 
 /*Los enlaces de las cajas son de color rojo*/
@@ -240,7 +238,7 @@ button{
 /*Creamos una clase para darle estilo a los enlaces que hay en las cajas*/
 .LinkPunteado{
 	font-weight: 800; /*Tipo de letra extra-bold*/
-	font-size: 0.9em; /*Tamaño*/
+	font-size: 0.75rem; /*Tamaño*/
 	border-bottom: 1px dotted rgb(189, 55, 0); /*Y un borde punteado inferior de 1 pixel*/
 }
 
@@ -281,7 +279,7 @@ button{
 
 /*Tipo de letra que tendrá el párrafo del síntoma*/
 .CajaSintoma p{
-	font-size: 0.8em;
+	font-size: 0.8rem;
 	text-align: justify; /*Alineación justificada*/
 	hyphens: auto; /*Que no extienda los espacios, que ponga guiones*/
 }
@@ -308,7 +306,7 @@ button{
 
 /*Estilo a la leyenda de cada vídeo*/
 .Leyenda{
-	font-size: 0.7em; /*Tamaño*/
+	font-size: 0.7rem; /*Tamaño*/
 	font-weight: bold; /*Negrita*/
 	font-style: italic; /*Cujrsiva*/
 	padding: 15px 0;
@@ -337,14 +335,14 @@ button{
 
 /*Alineación y tamaño de los títulos de cada columna*/
 .CajaColumna h2{
-	font-size: 1.2em;
+	font-size: 1.2rem;
 	text-align: left;
 	margin-bottom: 20px;
 }
 
 /*Estilo a los subtítulos de cada columnba*/
 .CajaColumna h3{
-	font-size: 1.3em;
+	font-size: 1.3rem;
 	margin: 0;
 	font-weight: 600; /*Tipo bold*/
 	font-variant: small-caps; /*Versálitas*/
@@ -360,7 +358,7 @@ button{
 /*Estilo al párrafo de las columnas*/
 .CajaColumna p{
 	margin: 0 0 15px 0;
-	font-size: 1em;
+	font-size: 1rem;
 }
 
 /*Clase que justifica el texto de los párrafos*/
@@ -372,14 +370,14 @@ button{
 /*Estilo a la lista numerada*/
 .CajaColumna ol li{
 	margin: 15px 0;
-	line-height: 1.4em; /*Espaciado entre líneas*/
+	line-height: 1.4rem; /*Espaciado entre líneas*/
 	text-align: justify;
 	hyphens: auto; /*Que no extienda los espacios, que ponga guiones*/
 }
 
 /*Estilo al blockquote*/
 blockquote{
-    font-size: 1em;
+    font-size: 1rem;
     background-color: rgb(255, 255, 255);
     border-left: 6px solid rgb(189, 55, 0); /*Borde rojo de 6 píxeles*/
     padding: 15px;
@@ -390,7 +388,7 @@ blockquote{
 /*Adaptamos el main a móviles*/
 @media screen and (max-width: 767px), screen and (orientation: portrait) {
 	#Seccion1a h3{
-		font-size: 2.1em;
+		font-size: 2.1rem;
 	}
 
 	#FlexboxNoticias, #FlexboxVideos, #FlexboxCop26{
@@ -427,7 +425,7 @@ footer{
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     padding: 30px 0 10px 0;
-	font-size: 0.8em;
+	font-size: 0.8rem;
 	font-weight: 400; /*Tipo de letra normal*/
 }
 
@@ -460,15 +458,15 @@ footer{
 }
 
 /*Tamaño de la letra autor*/
-#Autor{
-	font-size: 0.9em;
+#Autor p{
+	font-size: 0.8rem;
 }
 
 /*Estilo al link que lleva arriba*/
 #EnlaceInterno{
 	text-align: right;
 	margin-right: 20px;
-	font-size: 2em;
+	font-size: 2rem;
 }
 
 #EnlaceInterno a{
@@ -490,4 +488,5 @@ footer{
 		padding-right: 20px; /*Separados 20 píxeles*/
 	}
 }
+
 
