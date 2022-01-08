@@ -1,47 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,800;1,400&display=swap");
 
+/********************* ESTILO A ALGUNAS COSAS COMUNES *********************/
+/*Estilo al cuerpo*/
 body{
 	font-family: 'Raleway', sans-serif; /*La fuente que utilizará la página*/
-	font-weight: 400;
-	margin: 0;
-	background-color: rgb(244, 244, 244);
-	height: 100vh; /*Ocupará de ancho el 100%*/
-	color: rgb(0,0,0);
+	font-weight: 400; /*De forma predeterminada utilizará la 400*/
+	margin: 0; /*Eliminamos los márgenes que deja de forma predeterminada*/
+	background-color: rgb(244, 244, 244); /*Color de fondo*/
+	color: rgb(0, 0, 0); /*Color predeterminado del texto*/
 }
 
+/*Estilo a los enlaces*/
 a{
 	text-decoration: none; /*Quitamos el subrayado de los enlaces*/
-	color: rgb(189, 55, 0);
+	color: rgb(189, 55, 0); /*De forma predeterminada serán de color rojo*/
 }
 
+/*Estilo predeterminado a los títulos*/
 h1, h2{
-	font-size: 1.5em;
-	text-align: center;
-	margin: 25px 0 10px 0;
+	font-size: 1.5em; /*Tamaño*/
+	text-align: center; /*Alineación*/
+	margin: 25px 0 10px 0; /*Márgenes (top, right, bottom, left)*/
 }
 
+/*Estilo predeterminado a los párrafos*/
 p{
-	font-size: 1.1em;
-	margin: 10px 0;
-	line-height: 1.5em; /*Espaciado entre líneas*/
+	font-size: 1.1em; /*Tamaño*/
+	margin: 10px 0; /*Márgenes*/
+	line-height: 1.4em; /*Espaciado entre líneas*/
 }
 
+/*Clase negrita, pone el texto en negrita*/
 .Negrita{
 	font-weight: bold;
 }
 
-.NegritaCursiva{
-	font-weight: bold;
+/*Clase que pone el texto en cursiva*/
+.Cursiva{
 	font-style: italic;
 }
 
+/*Contenedor centrado que ocupará el 70% del ancho en escritorio y 95% en móviles*/
 .Contenedor{
 	width: 70%;
-	margin: auto;
+	margin: auto; /*Lo centramos*/
 }
 
-/*Si el ancho es menor de 600px (moviles) no se aplica el 70% de ancho al contenedor*/
-@media screen and (max-width: 600px){
+/*Si el ancho es menor de 640px (moviles) no se aplica el 70% de ancho al contenedor*/
+@media screen and (max-width: 640px){
 	.Contenedor{
 		width:95%;
 	}
@@ -49,255 +55,349 @@ p{
 
 /************************* CABECERA *************************/
 header{
-	background-color: white;
-	box-shadow: 0px 15px 15px rgb(244, 244, 244); /*Sombra inferior del header*/
-	padding: 15px 0;
+	background-color: white; /*Color de fondo blanco*/
+	padding-top: 20px; /*Añadimos un relleno superior para que no esté tan pegado*/
 }
 
-/*Si el ancho es menor de 600px (moviles) se centra el texto*/
-@media screen and (max-width: 600px){
-	header{text-align: center;}
+/*Si el ancho es menor de 640px (moviles) se centra el texto*/
+@media screen and (max-width: 640px){
+	header{
+		text-align: center;
+	}
 }
 
+/*Tamaño del Lema*/
 #LemaHeader{
 	font-size: 0.9em;
 }
+
+/*Tamaño del Titular*/
 #TitularHeader{
-	font-weight: 800;
+	font-weight: 800; /*Utilizará el tipo de letra extra-bold*/
 	font-size: 3.4em;
 }
 
+/*Cambiamos el color del enlace que hay en TitularHeader*/
 #TitularHeader a:link, a:visited{
-	color: rgb(0,0,0);
+	color: rgb(0, 0, 0); /*De forma predeterminada es rojo y queremos que éste en concreto sea negro*/
 }
 
-/*ESTILO DEL MENÚ*/
+/************************* MAIN *************************/
+main{
+	padding:0;
+	margin: 0;
+}
+/******* MENÚ PRINCIPAL *******/
+#MenuPrincipal{
+	position: sticky; /*Que se muestre aunque hagamos scroll*/
+	top: 0px;  /*Y permanezca en lo más alto*/
+	background-color: rgb(255, 255, 255);
+	padding: 15px 0; /*Añadimos un relleno de 15px arriba y abajo*/
+	font-weight: 800; /*Tipo de letra extra-bold*/
+	font-size: 0.9em; /*Tamaño de texto*/
+}
+
 /*Quitamos los puntos a la lista desordenada que forma el menú*/
 #MenuPrincipal ul{
 	list-style: none;
-	font-weight: 800;
-	font-size: 0.9em; /*Tamaño de texto*/
-	padding: 15px 0 0 0;
-	margin: 0;
+	padding: 0; /*También quitamos el relleno*/
+	margin: 0; /*Y márgenes*/
 }
 
 #MenuPrincipal li{
-	padding: 3px 0;
+	display: inline-block; /*Uno al lado de otro*/
+	padding-right: 20px; /*Separados 20 píxeles hacia la derecha*/
 }
 
-/*Colocamos los elementos del menú en línea (Solo versión escritorio)*/
-@media screen and (min-width: 600px){
+/*Colocamos los elementos del menú uno encima de otro (móviles)*/
+@media screen and (max-width: 640px){
 	#MenuPrincipal li{
-		display: inline-block; /*Uno al lado de otro*/
-		padding-right: 20px; /*Separados 20 píxeles*/
+		padding: 3px 0; /*Añadimos relleno arriba y abajo para separarlos*/
+		display: block; /*Uno encima de otro*/
+		text-align: center; /*Texto centrado*/
 	}
 }
 
 /*Le damos estilo a los enlaces del menú*/
 #MenuPrincipal li a{
-	color: rgb(0,0,0);
+	color: rgb(0, 0, 0);
 }
 
 /*Que los enlaces se pongan grises al pasar por encima*/
 #MenuPrincipal li a:hover{
-	color: rgba(0,0,0,0.5);
+	color: rgba(0, 0, 0, 0.5);
 }
 
+/*Clase que pone de color rojo los enlaces donde nos encontramos*/
 .Actual{
-	color: rgb(189, 55, 0) !important;
+	color: rgb(189, 55, 0) !important; /*Si no se pone importante no se aplica*/
 }
 
-/************************* MAIN *************************/
-main{
-	margin:0;
-	padding:0;
-}
-
+/******* CUERPO INDEX *******/
+/*Sección 1. Fondo llamas*/
 #Seccion1a{
-	background-image: url("../images/bg-hero-home.jpg");
-	height: 250px;
-	background-repeat: no-repeat;
+	height: 250px; /*Tendrá un alto de 250 píxeles*/
+	background-image: url("../images/bg-hero-home.jpg"); /*La sección tendrá esa imagen de fondo*/
+	background-repeat: no-repeat; /*El fondo no se repite*/
+	background-size: 100%; /*El fondo ocupará todo el ancho de la sección*/
 	display: flex; /*Centramos el texto verticalmente*/
-	background-size: 100%;
 }
 
+/*Texto de la Sección 1*/
 #Seccion1a h3{
-	color: rgb(255, 255, 255);
-	font-weight: 400;
-	font-size: 2.6em;
+	color: rgb(255, 255, 255); /*Color blanco*/
+	font-weight: 400; /*Tipo de letra normal*/
+	font-size: 2.6em; /*Tamaño*/
 	line-height: 1.5em; /*Espaciado entre líneas*/
 }
 
-#Seccion2a{
+/*Añadimos un margen inferior de 60px a la sección 2 y 3*/
+#Seccion2a, #Seccion3a{
 	margin-bottom: 60px;
 }
 
-#Seccion3a{
-	margin-bottom: 50px;
-}
-
-/*ESTILO DE LOS FLEXBOX*/
-/**** Noticias ****/
-#FlexboxNoticias{
-    display: flex; /*Los elementos se mostrarán como cajas flexibles*/
-    gap: 30px; /*Espaciado entre noticias*/
-}
-
-article{
-    flex: 1 1 33%; /*Cada artículo ocupará un 33% de ancho*/
-}
-
-.Noticia img{
-	width:100%;
-}
-
-.Noticia p.Fecha{
-    font-size: 0.7em; 
-    margin: 7px 0;    
-}
-
-.Noticia h3{
-	font-size: 0.9em;
-	margin: 0;
-	font-weight: 600;
-	line-height: 1.2em;
-}
-
-.Noticia p{
-	font-size: 0.8em;
-}
-
-.Noticia a, .Sintoma a{
-    color:rgb(189, 55, 0);
-}
-
-.Punteado{
-	font-weight: 800;
-	font-size: 0.9em;
-	border-bottom: 1px dotted rgb(189, 55, 0);
-}
-
-/**** Síntomas ****/
-#FlexboxSintomas{
-	margin: 30px 0 80px 0;
-}
-
-.Sintoma{
-	display: flex; /*Los elementos se mostrarán como cajas flexibles*/
-	width: 65%;
-    background-color: rgb(255, 255, 255);
-	padding: 12px;
-	margin-bottom: 30px;
-	border-radius: 10px;
-}
-
-.Derecha{
-	float: right;
-}
-
-.Sintoma img{
-	width: 50%;
-	object-fit: cover;
-}
-
-.TextoSintoma{
-	display: block;
-	margin-left: 15px;
-}
-
-.Sintoma h3{
-	font-weight: 600;
-	margin: 0;
-}
-
-.Sintoma p{
-	font-size: 0.7em;
-	text-align: justify;
-	hyphens: auto; /*Que no extienda los espacios, que ponga guiones*/
-}
-
-/**** Vídeos ****/
-#FlexboxVideos{
-	margin: 30px 0 80px 0;
-    display: flex; /*Los elementos se mostrarán como cajas flexibles*/
-    gap: 20px; /*Espaciado entre noticias*/
-	flex-wrap: wrap;
-}
-
-.Video iframe{
-	width: 100%;
-	height: 250px;
-}
-
-.Video{
-	background-color: rgb(255, 255, 255);
-	flex: 1 1 40%;
-}
-
-.Leyenda{
-	font-size: 0.7em;
-	font-weight: bold;
-	font-style: italic;
-	padding: 15px 0;
-	width: 90%;
-	margin: auto;
-	text-align: center;
-}
-
-.AutorVideo{
-	font-weight: normal;
-	font-style: normal;
-}
-
+/******* FORMULARIO DEL INDEX *******/
 #Seccion4a{
-	padding: 10px 0 50px 0;
-	background-color: rgb(242, 232, 228);
+	padding: 10px 0 50px 0; /*Añadimos un relleno arriba y abajo*/
+	background-color: rgb(242, 232, 228); /*Fondo de color salmón*/
 }
 
+/*El formulario tendrá un ancho del 70% del bloque que lo contiene y estará centrado*/
 form{
 	width: 70%;
 	margin: auto;
 }
 
+/*Los enlaces del formulario serán de color rojo*/
 form a{
-	color:rgb(189, 55, 0) !important;
+	color:rgb(189, 55, 0) !important; /*Si no se pone como importante no se aplica*/
 }
 
+/*Estilo a los input nombre y email*/
 #Nombre, #Email{
-	display: block;
-    width: 95%;
-    margin-bottom: 10px;
-    padding: 10px; 
+	display: block; /*Uno debajo de otro*/
+    width: 95%; /*Ancho*/
+    margin-bottom: 10px; /*Separación entre inputs*/
+    padding: 10px; /*Relleno*/
 }
 
-form p{
+/*El tamaño de la letra del formulario será pequeñito*/
+form p, label{
 	font-size: 0.6em
 }
 
-label{
-	font-size: 0.6em;
-}
-
+/*Estilo al botón*/
 button{
     padding: 10px 20px;
-	color: rgb(255, 255, 255);
-    border: none;
-    border-radius: 0px;
-    background-color: rgb(189, 55, 0);
-	margin-top: 10px;
+	color: rgb(255, 255, 255); /*Color de texto blanco*/
+    border: none; /*Sin borde*/
+    border-radius: 0px; /*Borde cuadrado*/
+    background-color: rgb(189, 55, 0); /*Color de botón rojo*/
+	margin-top: 10px; /*Para que no esté pegado al checkbox*/
+}
+
+/******* ESTILO DE LOS FLEXBOX DE TODAS LAS PÁGINAS *******/
+/**** Flexbox del index ****/
+#FlexboxNoticias{
+    display: flex; /*Los elementos se mostrarán como cajas flexibles*/
+    gap: 30px; /*Espaciado entre cajas*/
+}
+
+/*Cada caja que contiene la noticia ocupará un tercio del ancho*/
+.CajaNoticia{
+    flex: 1 1 0; /*Para que todos los elementos tengan el mismo punto de inicio y permitan que crezcan*/
+}
+
+/*La imagen de la noticia ocupará todo el ancho de la caja*/
+.CajaNoticia img{
+	width: 100%;
+}
+
+/*Tamaño de la fecha*/
+.CajaNoticia p.Fecha{
+    font-size: 0.7em; 
+    margin: 7px 0;  /*Le ponemos un margen superior e inferior para que no esté pegado a la imagen*/  
+}
+
+/*Estilo al titulo de la noticia*/
+.CajaNoticia h3{
+	font-size: 0.9em; /*Tamaño*/
+	margin: 0; /*Le quitamos el margen ya que la fecha y el párrafo lo incorporan*/
+	font-weight: 600; /*Tipo de letra bold*/
+	line-height: 1.2em; /*Espaciado entre líneas*/
+}
+
+/*Tamaño del texto de la noticia*/
+.CajaNoticia p{
+	font-size: 0.8em;
+}
+
+/*Los enlaces de las cajas son de color rojo*/
+.CajaNoticia a, .CajaSintoma a{
+    color:rgb(189, 55, 0);
+}
+
+/*Creamos una clase para darle estilo a los enlaces que hay en las cajas*/
+.LinkPunteado{
+	font-weight: 800; /*Tipo de letra extra-bold*/
+	font-size: 0.9em; /*Tamaño*/
+	border-bottom: 1px dotted rgb(189, 55, 0); /*Y un borde punteado inferior de 1 pixel*/
+}
+
+/**** Flexbox de los Síntomas ****/
+/*Le añadimos unos margenes superior e inferior*/
+#FlexboxSintomas{
+	margin: 20px 0 60px 0; 
+}
+
+/*Le damos estilo a la caja de los síntomas*/
+.CajaSintoma{
+	display: flex; /*Los elementos se mostrarán como cajas flexibles*/
+	width: 65%; /*Cada caja tendrá un ancho del 65% (respecto al contenedor)*/
+    background-color: rgb(255, 255, 255);
+	padding: 12px; /*Le aplicamos un poco de relleno a los 4 lados*/
+	margin-bottom: 30px;
+	border-radius: 10px; /*Que el borde sea redondeado*/
+}
+
+/*Esta clase hace que la caja de síntoma se posicione a la derecha*/
+.Derecha{
+	float: right;
+}
+
+/*Estilo a la imagen de cada caja de síntomas*/
+.CajaSintoma img{
+	width: calc(50% - 6px); /*La imagen ocupará la mitad de la caja (Le quitamos la mitad del padding)*/
+	/*height:fit-content;*/ /*Para que la imagen mantenga su relación de aspecto*/
+	object-fit: cover; /*Se dedide utilizar el cover para que no se deforme en vez del "fit-content"*/
+	margin-right: 15px; /*Le ponemos un margen para que la descripción no esté pegada*/
+}
+
+/*Tipo de letra que tendrá el título del síntoma*/
+.CajaSintoma h3{
+	font-weight: 600; /*Tipo bold*/
+	margin: 0;
+}
+
+/*Tipo de letra que tendrá el párrafo del síntoma*/
+.CajaSintoma p{
+	font-size: 0.7em;
+	text-align: justify; /*Alineación justificada*/
+	hyphens: auto; /*Que no extienda los espacios, que ponga guiones*/
+}
+
+/**** Flexbox de los vídeos ****/
+#FlexboxVideos{
+	margin: 30px 0 60px 0; /*Añadimos unos márgenes superior e inferior*/
+    display: flex; /*Los elementos se mostrarán como cajas flexibles*/
+    gap: 20px; /*Espaciado entre elementos*/
+	flex-wrap: wrap; /*Para controlar la dirección como serán apilados los elementos*/
+}
+
+/*Tamaño de cada caja y color de fondo*/
+.CajaVideo{
+	background-color: rgb(255, 255, 255);
+	flex-basis: calc(50% - 10px); /*Al tamaño le quitamos 10 porque tiene 20 de gap*/
+}
+
+/*Tamaño del vídeo*/
+.CajaVideo iframe{
+	width: 100%;
+	height: 200px;
+}
+
+/*Estilo a la leyenda de cada vídeo*/
+.Leyenda{
+	font-size: 0.7em; /*Tamaño*/
+	font-weight: bold; /*Negrita*/
+	font-style: italic; /*Cujrsiva*/
+	padding: 15px 0;
+	width: 90%; /*Ancho*/
+	margin: auto; /*Centrado el div*/
+	text-align: center; /*Centrado el texto*/
+}
+
+/*Clase que pone el texto normal*/
+.TextoNormal{
+	font-weight: normal;
+	font-style: normal;
+}
+
+/**** Flexbox del Cop26 ****/
+#FlexboxCop26{
+	display: flex; /*Los elementos se mostrarán como cajas flexibles*/
+	gap: 60px; /*Espaciado entre columnas*/
+	margin-bottom: 60px;
+}
+	
+/*Cada columna será del mismo tamaño*/
+.CajaColumna{
+	flex: 1 1;
+}
+
+/*Alineación y tamaño de los títulos de cada columna*/
+.CajaColumna h2{
+	font-size: 1.2em;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+/*Estilo a los subtítulos de cada columnba*/
+.CajaColumna h3{
+	font-size: 1.3em;
+	margin: 0;
+	font-weight: 600; /*Tipo bold*/
+	font-variant: small-caps; /*Versálitas*/
+}
+
+/*Estilo a la imagen que hay en la columna 1*/
+.CajaColumna img{
+	width: 100%;
+	max-width: 300px; /*Nunca podrá medir más de 300px de ancho*/
+	height: auto;
+}
+
+/*Estilo al párrafo de las columnas*/
+.CajaColumna p{
+	margin: 0 0 15px 0;
+	font-size: 1em;
+}
+
+/*Clase que justifica el texto de los párrafos*/
+.Justificado p{
+	text-align: justify;
+	hyphens: auto; /*Que no extienda los espacios, que ponga guiones*/
+}
+
+/*Estilo a la lista numerada*/
+.CajaColumna ol li{
+	margin: 15px 0;
+	line-height: 1.4em; /*Espaciado entre líneas*/
+	text-align: justify;
+	hyphens: auto; /*Que no extienda los espacios, que ponga guiones*/
+}
+
+/*Estilo al blockquote*/
+blockquote{
+    font-size: 1em;
+    background-color: rgb(255, 255, 255);
+    border-left: 6px solid rgb(189, 55, 0); /*Borde rojo de 6 píxeles*/
+    padding: 15px;
+	margin: 0 0 20px 0;
+	font-style: italic; /*Cursiva*/
 }
 
 /*Adaptamos el main a móviles*/
-@media screen and (max-width: 600px){
+@media screen and (max-width: 640px){
 	#Seccion1a h3{
 		font-size: 2.1em;
 	}
 
-	#FlexboxNoticias, #FlexboxVideos{
+	#FlexboxNoticias, #FlexboxVideos, #FlexboxCop26{
 		display:block; /*Que no se muestre como cajas flexibles*/
 	}
 
-	.Sintoma{
+	.CajaSintoma{
 		display: block; /*Los elementos se mostrarán como cajas flexibles*/
 		width: 90%;
 		margin: auto;
@@ -307,13 +407,13 @@ button{
 		float: none;
 	}
 
-	.Sintoma img{
+	.CajaSintoma img{
 		padding-top: 15px;
 		width: 100%;
 		margin-bottom: 10px;
 	}
 
-	article, .Sintoma, .Video{
+	.CajaNoticia, .CajaSintoma, .CajaVideo{
 		margin-bottom: 30px;
 	}
 
@@ -322,23 +422,23 @@ button{
 	}
 }
 
-
 /************************* PIE *************************/
-
 footer{
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     padding: 30px 0 10px 0;
 	font-size: 0.8em;
-	font-weight: 400;
+	font-weight: 400; /*Tipo de letra normal*/
 }
 
+/*Estilo a los menus del pie*/
 #MenuTerminosLegales ul, #MenuRedesSociales ul{
 	list-style: none;
 	padding: 15px 0 0 0;
 	margin: 0;
 }
 
+/*Elementos del menu TerminosLegales*/
 #MenuTerminosLegales li{
 	display: inline-block; /*Uno al lado de otro*/
 	padding-right: 20px; /*Separados 20 píxeles*/
@@ -349,23 +449,28 @@ footer{
 	margin: 10px 0;
 }
 
+/*Ños enlaces del menu en color blanco*/
 #MenuTerminosLegales li a{
 	color: rgb(255, 255, 255);
 }
 
+/*El color al pasar sobre los enlaces será rojo*/
 #MenuTerminosLegales li a:hover{
 	color: rgb(189, 55, 0);
 }
 
+/*Tamaño de la letra autor*/
 #Autor{
 	font-size: 0.9em;
 }
 
+/*Estilo al link que lleva arriba*/
 #EnlaceInterno{
 	text-align: right;
 	margin-right: 20px;
 	font-size: 2em;
 }
+
 #EnlaceInterno a{
 	color: rgb(255, 255, 255);
 }
@@ -374,8 +479,8 @@ footer{
 	color: rgb(189, 55, 0);
 }
 
-/*Versión móvil*/
-@media screen and (max-width: 600px){
+/*Versión móvil del footer*/
+@media screen and (max-width: 640px){
 	footer{
 		text-align: center;
 	}
